@@ -25,6 +25,6 @@ enum OpenWeatherAPIConstants {
 
 enum FakeRegion {
     static let name = "Saint-Petersburg"
-    static let latitude = 51.507351
-    static let longitude = -0.127660
+    static let latitude = 59.939095
+    static let longitude = 30.315868
 }
