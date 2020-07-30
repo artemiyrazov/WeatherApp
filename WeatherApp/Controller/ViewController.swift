@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView = view as? MainView
-        mainView.tableView.delegate = self
-        mainView.tableView.dataSource = self
+        mainView.setUpTableViewDelegate(self)
+        mainView.setUpTableViewDataSource(self)
         loadDailyForecast()
     }
     
@@ -37,12 +37,11 @@ class ViewController: UIViewController {
     
     func refreshViews() {
         let todayForecast = forecasts[0]
-        mainView.configure(date: todayForecast.dateString,
+        mainView.updateView (date: todayForecast.dateString,
                            region: FakeRegion.name,
                            temperature: Int(todayForecast.temperature),
                            description: todayForecast.weather.description,
                            systemImageName: todayForecast.weather.weatherType.systemImageName)
-        mainView.tableView.reloadData()
     }
 }
 

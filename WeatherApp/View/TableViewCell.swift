@@ -7,9 +7,9 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     static let CellReuseID = "Cell"
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var weatherIconImageView: UIImageView!
-    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var weatherIconImageView: UIImageView!
+    @IBOutlet private weak var temperatureLabel: UILabel!
     
     func configure(date: String, systemImageName: String, temperature: Int) {
         dateLabel.text = date
