@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA5105E124D40B0600A98B77 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */; };
+		BA5105E324D40BCF00A98B77 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5105E224D40BCF00A98B77 /* CoreDataService.swift */; };
 		BAD9085924D1CD5400D447A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085824D1CD5400D447A0 /* AppDelegate.swift */; };
 		BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */; };
 		BAD9085D24D1CD5400D447A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085C24D1CD5400D447A0 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA5105E024D40B0600A98B77 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		BA5105E224D40BCF00A98B77 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		BAD9085524D1CD5400D447A0 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD9085824D1CD5400D447A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				BAD9085824D1CD5400D447A0 /* AppDelegate.swift */,
 				BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */,
 				BAD9086124D1CD5900D447A0 /* Assets.xcassets */,
+				BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD9087724D29ECC00D447A0 /* NetworkService.swift */,
+				BA5105E224D40BCF00A98B77 /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -197,12 +203,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD9087024D1DE0D00D447A0 /* TableViewCell.swift in Sources */,
+				BA5105E124D40B0600A98B77 /* DataModel.xcdatamodeld in Sources */,
 				BAD9086E24D1DDEC00D447A0 /* MainView.swift in Sources */,
 				BAD9087A24D29FFD00D447A0 /* Forecast.swift in Sources */,
 				BAD9085D24D1CD5400D447A0 /* ViewController.swift in Sources */,
 				BAD9087C24D2A08500D447A0 /* APIConstants.swift in Sources */,
 				BAD9085924D1CD5400D447A0 /* AppDelegate.swift in Sources */,
 				BAD9087824D29ECC00D447A0 /* NetworkService.swift in Sources */,
+				BA5105E324D40BCF00A98B77 /* CoreDataService.swift in Sources */,
 				BAD9087E24D2CF1D00D447A0 /* Errors.swift in Sources */,
 				BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */,
 			);
@@ -402,6 +410,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA5105E024D40B0600A98B77 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = BA5105E024D40B0600A98B77 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BAD9084D24D1CD5400D447A0 /* Project object */;
 }
