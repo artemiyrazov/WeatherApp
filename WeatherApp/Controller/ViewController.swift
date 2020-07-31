@@ -8,7 +8,8 @@ import UIKit
 class ViewController: UIViewController {
     
     let networkService = NetworkService()
-    var forecasts: [Forecast] = []
+    var futureForecasts: [Forecast] = []
+    var todayForecast: Forecast?
     var mainView: MainView!
     
     override func viewDidLoad() {
@@ -25,7 +26,9 @@ class ViewController: UIViewController {
             
             switch response {
             case .success(let forecasts):
-                self.forecasts = forecasts
+                guard !forecasts.isEmpty else { return }
+                self.todayForecast = forecasts[0]
+                self.futureForecasts = Array(forecasts.dropFirst())
                 DispatchQueue.main.async {
                     self.refreshViews()
                 }
@@ -36,12 +39,12 @@ class ViewController: UIViewController {
     }
     
     func refreshViews() {
-        let todayForecast = forecasts[0]
+        guard let todayForecast = todayForecast else { return }
         mainView.updateView (date: todayForecast.dateString,
                            region: FakeRegion.name,
                            temperature: Int(todayForecast.temperature),
-                           description: todayForecast.weather.description,
-                           systemImageName: todayForecast.weather.weatherType.systemImageName)
+                           description: todayForecast.description,
+                           systemImageName: todayForecast.weatherType.systemImageName)
     }
 }
 
@@ -52,17 +55,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // The first item is shown outside the table
-        forecasts.count - 1
+        futureForecasts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.CellReuseID) as? TableViewCell else {
             return UITableViewCell()
         }
-        let forecast = forecasts[indexPath.row + 1]
+        let forecast = futureForecasts[indexPath.row]
         cell.configure(date: forecast.dateString,
-                       systemImageName: forecast.weather.weatherType.systemImageName,
+                       systemImageName: forecast.weatherType.systemImageName,
                        temperature: Int(forecast.temperature))
         return cell
     }
