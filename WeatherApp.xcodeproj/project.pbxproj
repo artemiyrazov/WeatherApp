@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA5105E124D40B0600A98B77 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */; };
 		BA5105E324D40BCF00A98B77 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5105E224D40BCF00A98B77 /* CoreDataService.swift */; };
+		BA5105E524D429D500A98B77 /* InternetConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5105E424D429D500A98B77 /* InternetConnectionService.swift */; };
 		BAD9085924D1CD5400D447A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085824D1CD5400D447A0 /* AppDelegate.swift */; };
 		BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */; };
 		BAD9085D24D1CD5400D447A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085C24D1CD5400D447A0 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		BA5105E024D40B0600A98B77 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		BA5105E224D40BCF00A98B77 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		BA5105E424D429D500A98B77 /* InternetConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionService.swift; sourceTree = "<group>"; };
 		BAD9085524D1CD5400D447A0 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD9085824D1CD5400D447A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,12 +86,12 @@
 		BAD9086C24D1DC8200D447A0 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */,
 				BAD9086324D1CD5900D447A0 /* LaunchScreen.storyboard */,
 				BAD9086624D1CD5900D447A0 /* Info.plist */,
 				BAD9085824D1CD5400D447A0 /* AppDelegate.swift */,
 				BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */,
 				BAD9086124D1CD5900D447A0 /* Assets.xcassets */,
-				BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -127,6 +129,7 @@
 			children = (
 				BAD9087724D29ECC00D447A0 /* NetworkService.swift */,
 				BA5105E224D40BCF00A98B77 /* CoreDataService.swift */,
+				BA5105E424D429D500A98B77 /* InternetConnectionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5105E524D429D500A98B77 /* InternetConnectionService.swift in Sources */,
 				BAD9087024D1DE0D00D447A0 /* TableViewCell.swift in Sources */,
 				BA5105E124D40B0600A98B77 /* DataModel.xcdatamodeld in Sources */,
 				BAD9086E24D1DDEC00D447A0 /* MainView.swift in Sources */,

@@ -46,7 +46,7 @@ class CoreDataService {
         }
     }
     
-    func saveForecastToDevice(forecast: Forecast) {
+    private func saveForecastToDevice(forecast: Forecast) {
         
         let cachedForecastObject = CachedForecast(context: mainContext)
         
@@ -56,6 +56,11 @@ class CoreDataService {
         cachedForecastObject.weatherDescription = forecast.description
         
         saveContext()
+    }
+    
+    func updateForecastsInStorage(withNew forecasts: [Forecast]) {
+        removeAllForecasts()
+        forecasts.forEach { saveForecastToDevice(forecast: $0) }
     }
     
     func fetchForecasts () -> [CachedForecast] {

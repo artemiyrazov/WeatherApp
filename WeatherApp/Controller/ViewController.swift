@@ -18,20 +18,33 @@ class ViewController: UIViewController {
         mainView = view as? MainView
         mainView.setUpTableViewDelegate(self)
         mainView.setUpTableViewDataSource(self)
-        loadDailyForecast()
+        getDailyForecast()
     }
     
-    func loadDailyForecast() {
+    private func getDailyForecast() {
+        let forecasts = coreDataService.fetchForecasts().map { cachedForecast -> Forecast in
+            return Forecast(temperature: Int(cachedForecast.temperature),
+                            date: cachedForecast.date!,
+                            description: cachedForecast.weatherDescription!,
+                            weatherType: WeatherType(rawValue: cachedForecast.weatherType!)!)
+        }
+        presentNewForecasts(forecasts)
+        
+        if InternetConnectionService.isConnectedToNetwork() {
+            loadDailyForecastFromServer()
+        }
+    }
+    
+    private func loadDailyForecastFromServer() {
+        
         networkService.dailyForecastRequest(latitude: FakeRegion.latitude, longitude: FakeRegion.longitude) { [weak self] response in
             guard let self = self else { return }
             
             switch response {
             case .success(let forecasts):
-                guard !forecasts.isEmpty else { return }
-                self.todayForecast = forecasts[0]
-                self.futureForecasts = Array(forecasts.dropFirst())
                 DispatchQueue.main.async {
-                    self.refreshViews()
+                    self.presentNewForecasts(forecasts)
+                    self.coreDataService.updateForecastsInStorage(withNew: forecasts)
                 }
             case .failure(let error):
                 print(error)
@@ -39,7 +52,14 @@ class ViewController: UIViewController {
         }
     }
     
-    func refreshViews() {
+    private func presentNewForecasts (_ forecasts: [Forecast]) {
+        guard !forecasts.isEmpty else { return }
+        todayForecast = forecasts[0]
+        futureForecasts = Array(forecasts.dropFirst())
+        refreshViews()
+    }
+    
+    private func refreshViews() {
         guard let todayForecast = todayForecast else { return }
         mainView.updateView (date: todayForecast.dateString,
                            region: FakeRegion.name,
