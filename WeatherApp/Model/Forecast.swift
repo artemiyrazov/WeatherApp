@@ -6,7 +6,7 @@
 import Foundation
 
 struct Forecast {
-    let temperature: Double
+    let temperature: Int
     let date: Date
     let description: String
     let weatherType: WeatherType
@@ -55,7 +55,7 @@ extension Forecast: Decodable {
                 
         // Nested container with temperature
         let temperatureContainer = try container.nestedContainer(keyedBy: TemparatureCodingKeys.self, forKey: .temp)
-        temperature = try temperatureContainer.decode(Double.self, forKey: .temparature)
+        temperature = try  Int(temperatureContainer.decode(Double.self, forKey: .temparature))
     }
 }
 

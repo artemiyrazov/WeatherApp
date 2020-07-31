@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         guard let todayForecast = todayForecast else { return }
         mainView.updateView (date: todayForecast.dateString,
                            region: FakeRegion.name,
-                           temperature: Int(todayForecast.temperature),
+                           temperature: todayForecast.temperature,
                            description: todayForecast.description,
                            systemImageName: todayForecast.weatherType.systemImageName)
     }
@@ -65,7 +65,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let forecast = futureForecasts[indexPath.row]
         cell.configure(date: forecast.dateString,
                        systemImageName: forecast.weatherType.systemImageName,
-                       temperature: Int(forecast.temperature))
+                       temperature: forecast.temperature)
         return cell
     }
 }
