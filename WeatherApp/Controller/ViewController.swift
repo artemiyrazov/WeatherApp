@@ -7,10 +7,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let networkService = NetworkService()
-    var futureForecasts: [Forecast] = []
-    var todayForecast: Forecast?
-    var mainView: MainView!
+    private let networkService = NetworkService()
+    private let coreDataService = CoreDataService.shared
+    private var futureForecasts: [Forecast] = []
+    private var todayForecast: Forecast?
+    private var mainView: MainView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

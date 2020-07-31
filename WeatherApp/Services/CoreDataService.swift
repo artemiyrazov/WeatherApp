@@ -35,4 +35,41 @@ class CoreDataService {
             }
         }
     }
+    
+    private func removeAllForecasts() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = CachedForecast.fetchRequest()
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        do {
+            try mainContext.execute(batchDeleteRequest)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func saveForecastToDevice(forecast: Forecast) {
+        
+        let cachedForecastObject = CachedForecast(context: mainContext)
+        
+        cachedForecastObject.temperature = Int16(forecast.temperature)
+        cachedForecastObject.date = forecast.date
+        cachedForecastObject.weatherType = forecast.weatherType.rawValue
+        cachedForecastObject.weatherDescription = forecast.description
+        
+        saveContext()
+    }
+    
+    func fetchForecasts () -> [CachedForecast] {
+        let fetchRequest: NSFetchRequest<CachedForecast> = CachedForecast.fetchRequest()
+        let dateSortDescriptor = NSSortDescriptor(key: #keyPath(CachedForecast.date), ascending: true)
+        fetchRequest.sortDescriptors = [dateSortDescriptor]
+        
+        var cachedForecasts: [CachedForecast] = []
+        do {
+            cachedForecasts = try mainContext.fetch(fetchRequest)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return cachedForecasts
+    }
+
 }
