@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     func loadDailyForecast() {
-        networkService.dailyForecastRequest(latitude: FakeRegion.latitude, longitude: FakeRegion.longitude) { [weak self] response in
+        networkService.dailyForecastRequest(latitude: Location.fakeLocation.latitude, longitude: Location.fakeLocation.longitude) { [weak self] response in
             guard let self = self else { return }
             
             switch response {
@@ -37,11 +37,11 @@ class ViewController: UIViewController {
     
     func refreshViews() {
         let todayForecast = forecasts[0]
-        mainView.updateView (date: todayForecast.dateString,
-                           region: FakeRegion.name,
-                           temperature: Int(todayForecast.temperature),
-                           description: todayForecast.weather.description,
-                           systemImageName: todayForecast.weather.weatherType.systemImageName)
+        mainView.showRegion(with: Location.fakeLocation.name)
+        mainView.showForecast (date: todayForecast.dateString,
+                             temperature: Int(todayForecast.temperature),
+                             description: todayForecast.weather.description,
+                             systemImageName: todayForecast.weather.weatherType.systemImageName)
     }
 }
 
