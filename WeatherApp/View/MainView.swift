@@ -15,7 +15,7 @@ class MainView: UIView {
     @IBOutlet private weak var tableView: UITableView!
     
     func showForecast (date: String, temperature: Int, description: String, systemImageName: String) {
-        dateLabel.text = "today \(date)"
+        dateLabel.text = "today".localized() + ", " + date
         temperatureLabel.text = "\(temperature)ºC"
         weatherDescriptionLabel.text = description
         weatherIconImageView.image = UIImage(systemName: systemImageName)

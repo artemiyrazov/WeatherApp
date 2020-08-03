@@ -31,10 +31,10 @@ class ForecastViewController: UIViewController {
         do {
             try locationService.locationAvailability()
         } catch let error as LocationRequestError {
-            showAlert(title: "Location availability error", message: error.localizedDescription, actionTitle: "OK")
+            showAlert(title: "location availability error".localized(), message: error.localizedDescription, actionTitle: "OK")
             currentLocation = Location.fakeLocation
         } catch {
-            showAlert(title: "Error", message: "Some undefined error", actionTitle: "OK")
+            showAlert(title: "error".localized(), message: "some undefined error".localized(), actionTitle: "OK")
             currentLocation = Location.fakeLocation
         }
     }
@@ -104,7 +104,7 @@ extension ForecastViewController: CLLocationManagerDelegate {
             case .success(let location):
                 self.currentLocation = location
             case .failure(let error):
-                self.showAlert(title: "Location availability error", message: error.localizedDescription, actionTitle: "OK")
+                self.showAlert(title: "location availability error".localized(), message: error.localizedDescription, actionTitle: "OK")
                 self.currentLocation = Location.fakeLocation
             }
         }

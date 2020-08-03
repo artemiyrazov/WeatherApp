@@ -18,11 +18,11 @@ enum LocationRequestError: Error {
     var localizedDescription: String {
         switch self {
         case .locationServicesDisabled:
-            return "Location services disabled.\nTurn on Settings - Privacy - Location services"
+            return "location services disabled".localized()
         case .locationUnavailable:
-            return "Location unavailable.\nTurn on Settings - Weather - Location"
+            return "location unavailable".localized()
         case .locationUndefined:
-            return "Location undefined. Try again later"
+            return "location undefined".localized()
         }
     }
 }
