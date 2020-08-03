@@ -6,13 +6,13 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class ForecastViewController: UIViewController {
     
-    let locationService = LocationService()
-    let networkService = NetworkService()
-    var forecasts: [Forecast] = []
-    var mainView: MainView!
-    var currentLocation: Location! {
+    private let locationService = LocationService()
+    private let networkService = NetworkService()
+    private var forecasts: [Forecast] = []
+    private var mainView: MainView!
+    private var currentLocation: Location! {
         didSet {
             mainView.showRegion(with: currentLocation.name)
             loadForecastFromServer()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         locationService.locationManagerDelegate = self
     }
     
-    func getLocalDailyForecast() {
+    private func getLocalDailyForecast() {
         do {
             try locationService.locationAvailability()
         } catch let error as LocationRequestError {
@@ -39,8 +39,9 @@ class ViewController: UIViewController {
         }
     }
     
-    func loadForecastFromServer() {
-        networkService.dailyForecastRequest(latitude: currentLocation.latitude, longitude: currentLocation.longitude) { [weak self] response in
+    private func loadForecastFromServer() {
+        networkService.dailyForecastRequest(latitude: currentLocation.latitude,
+                                            longitude: currentLocation.longitude) { [weak self] response in
             guard let self = self else { return }
             
             switch response {
@@ -55,7 +56,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func refreshViews() {
+    private func refreshViews() {
         let todayForecast = forecasts[0]
         mainView.showForecast (date: todayForecast.dateString,
                              temperature: Int(todayForecast.temperature),
@@ -64,7 +65,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         50
@@ -87,7 +88,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension ViewController: CLLocationManagerDelegate {
+extension ForecastViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         getLocalDailyForecast()
@@ -114,4 +115,3 @@ extension ViewController: CLLocationManagerDelegate {
         print(error.localizedDescription)
     }
 }
-
