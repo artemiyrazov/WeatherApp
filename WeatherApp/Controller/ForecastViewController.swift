@@ -8,6 +8,7 @@ import CoreLocation
 
 class ForecastViewController: UIViewController {
     
+    private let mapViewControllerID = "MapVC"
     private let locationService = LocationService()
     private let networkService = NetworkService()
     private var forecasts: [Forecast] = []
@@ -76,7 +77,7 @@ class ForecastViewController: UIViewController {
     
     private func presentMapViewController(with forecast: Forecast, _ location: Location) {
         let mapVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(identifier: "MapVC") as! MapViewController
+            .instantiateViewController(identifier: mapViewControllerID) as! MapViewController
         mapVC.forecast = forecast
         mapVC.location = location
         navigationController?.pushViewController(mapVC, animated: true)
