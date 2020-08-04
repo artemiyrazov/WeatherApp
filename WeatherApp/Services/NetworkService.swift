@@ -18,7 +18,7 @@ class NetworkService {
         queryItems.append(URLQueryItem(name: "lon", value: String(longitude)))
         queryItems.append(URLQueryItem(name: "appid", value: OpenWeatherAPIConstants.APIKey))
         queryItems.append(URLQueryItem(name: "units", value: TemperatureUnits.celsius.rawValue))
-        queryItems.append(URLQueryItem(name: "lang", value: NSLocalizedString("language", comment: "")))
+        queryItems.append(URLQueryItem(name: "lang", value: "language".localized()))
         
         let excludedReports: String = "\(ForecastReportType.current),\(ForecastReportType.hourly),\(ForecastReportType.minutely)"
         queryItems.append(URLQueryItem(name: "exclude",
