@@ -27,6 +27,16 @@ class ForecastViewController: UIViewController {
         locationService.locationManagerDelegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     private func getLocalDailyForecast() {
         do {
             try locationService.locationAvailability()
@@ -63,6 +73,14 @@ class ForecastViewController: UIViewController {
                              description: todayForecast.weather.description,
                              systemImageName: todayForecast.weather.weatherType.systemImageName)
     }
+    
+    private func presentMapViewController(with forecast: Forecast, _ location: Location) {
+        let mapVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(identifier: "MapVC") as! MapViewController
+        mapVC.forecast = forecast
+        mapVC.location = location
+        navigationController?.pushViewController(mapVC, animated: true)
+    }
 }
 
 extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
@@ -85,6 +103,11 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
                        systemImageName: forecast.weather.weatherType.systemImageName,
                        temperature: Int(forecast.temperature))
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let location = currentLocation else { return }
+        presentMapViewController(with: forecasts[indexPath.row], location)
     }
 }
 

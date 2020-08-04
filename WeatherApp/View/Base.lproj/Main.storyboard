@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JAi-OK-q6d">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-FG-Lif">
-                                <rect key="frame" x="25" y="93.999999999999986" width="325" height="153.66666666666663"/>
+                                <rect key="frame" x="25" y="138" width="325" height="153.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de1-PD-iPI">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -49,7 +50,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tdZ-eL-Iea">
-                                                        <rect key="frame" x="0.0" y="70.666666666666657" width="100" height="25"/>
+                                                        <rect key="frame" x="0.0" y="70.666666666666686" width="100" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="HBM-6G-cb7"/>
                                                         </constraints>
@@ -77,9 +78,9 @@
                                     <constraint firstAttribute="trailing" secondItem="e5D-qu-lX3" secondAttribute="trailing" id="S9F-Oz-UFp"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uS6-RW-9EF">
-                                <rect key="frame" x="0.0" y="277.66666666666669" width="375" height="534.33333333333326"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uS6-RW-9EF">
+                                <rect key="frame" x="0.0" y="321.66666666666674" width="375" height="490.33333333333326"/>
+                                <color key="backgroundColor" name="CustomBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="50" id="SGq-5f-eE9" customClass="TableViewCell" customModule="Weather">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
@@ -112,6 +113,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="CustomBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="ynZ-O9-mlH" firstAttribute="leading" secondItem="HTe-zO-w3f" secondAttribute="leadingMargin" constant="10" id="B9F-Zn-8M8"/>
                                                 <constraint firstItem="sXV-Le-4ET" firstAttribute="leading" secondItem="omS-oT-BUP" secondAttribute="trailing" constant="15" id="Bdh-1R-4iO"/>
@@ -131,7 +133,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="CustomBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="uS6-RW-9EF" secondAttribute="bottom" id="3bs-Xb-zov"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n5A-FG-Lif" secondAttribute="trailing" constant="25" id="G5B-oK-lVc"/>
@@ -151,10 +153,64 @@
                             <outlet property="weatherIconImageView" destination="vqV-Jo-co4" id="QyW-IU-xhW"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="Np3-oU-nvw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="115.27093596059113"/>
+            <point key="canvasLocation" x="842" y="115"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="f7N-B2-eyP">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" modalPresentationStyle="fullScreen" id="0aZ-3g-qNw" customClass="MapViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ODG-4e-WdN" customClass="MapView" customModule="Weather" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Sbw-IE-KXL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sbw-IE-KXL" secondAttribute="trailing" id="a8c-gt-ru2"/>
+                            <constraint firstItem="Sbw-IE-KXL" firstAttribute="top" secondItem="ODG-4e-WdN" secondAttribute="top" id="eCt-f8-T5N"/>
+                            <constraint firstItem="Sbw-IE-KXL" firstAttribute="leading" secondItem="ODG-4e-WdN" secondAttribute="leading" id="nhm-Vp-IXf"/>
+                            <constraint firstAttribute="bottom" secondItem="Sbw-IE-KXL" secondAttribute="bottom" id="opJ-M2-lCp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f8a-el-hDL"/>
+                        <connections>
+                            <outlet property="mkMapView" destination="Sbw-IE-KXL" id="tPI-xV-bgJ"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="lIO-KU-4uS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhw-gD-HMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AvZ-Hm-CHS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JAi-OK-q6d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n7N-N7-F3K">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ks1-oE-FQh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VdE-HJ-bGO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-209" y="115"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="CustomBackgroundColor">
+            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
