@@ -1,24 +1,20 @@
-/* No comment provided by engineer. */
+
+"dateFormat" = "d MMMM";
+"language" = "ru";
+
+"Cupertino" = "Купертино";
+"today" = "сегодня";
 "error" = "Ошибка";
 
-/* No comment provided by engineer. */
+"Internet connection error" = "Ошибка интернет соединения";
+"JSON parsing error" = "Ошибка чтения данных с сервера";
 "location availability error" = "Ошибка доступа к геолокации";
-
-/* No comment provided by engineer. */
-"location services disabled" = "Службы геолокации отключены. Активируйте их в Настройки - Конфеденциальность - Службы геолокации";
-
-/* No comment provided by engineer. */
-"location unavailable" = "Локация пользователя недоступна. Предоставьте доступ в Настройки - Погода - Геопозиция";
-
-/* No comment provided by engineer. */
-"location undefined" = "Геолокация не определена. Попробуйте позже";
-
-/* No comment provided by engineer. */
+"Network request error" = "Ошибка на сервере";
 "some undefined error" = "Неопределенная ошибка";
+"Invalid server response" = "Некорректный ответ от сервера";
 
-/* No comment provided by engineer. */
-"today" = "сегодня";
-
-/* No comment provided by engineer. */
-"dateFormat" = "d MMMM";
+"Check your internet connection and try again" = "Проверьте интернет соединение и попробуйте еще раз";
+"location unavailable" = "Локация пользователя недоступна. Предоставьте доступ в Настройки - Погода - Геопозиция";
+"location undefined" = "Геолокация не определена. Попробуйте позже";
+"location services disabled" = "Службы геолокации отключены. Активируйте их в Настройки - Конфеденциальность - Службы геолокации";
 

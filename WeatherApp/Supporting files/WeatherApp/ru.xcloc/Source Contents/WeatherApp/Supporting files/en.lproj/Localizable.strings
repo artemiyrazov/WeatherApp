@@ -1,0 +1,24 @@
+/* No comment provided by engineer. */
+"dateFormat" = "MMMM, d";
+
+/* No comment provided by engineer. */
+"today" = "today";
+
+/* No comment provided by engineer. */
+"error" = "Ошибка";
+
+/* No comment provided by engineer. */
+"location availability error" = "Ошибка доступа к геолокации";
+
+/* No comment provided by engineer. */
+"location services disabled" = "Службы геолокации отключены. Активируйте их в Настройки - Конфеденциальность - Службы геолокации";
+
+/* No comment provided by engineer. */
+"location unavailable" = "Локация пользователя недоступна. Предоставьте доступ в Настройки - Погода - Геопозиция";
+
+/* No comment provided by engineer. */
+"location undefined" = "Геолокация не определена. Попробуйте позже";
+
+/* No comment provided by engineer. */
+"some undefined error" = "Неопределенная ошибка";
+

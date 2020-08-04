@@ -10,5 +10,5 @@ struct Location {
     let latitude: Double
     let longitude: Double
     
-    static let fakeLocation = Location(name: "Cupertino", latitude: 37.322621, longitude: -122.031945)
+    static let fakeLocation = Location(name: "Cupertino".localized(), latitude: 37.322621, longitude: -122.031945)
 }

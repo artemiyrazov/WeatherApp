@@ -85,7 +85,7 @@ class ForecastViewController: UIViewController {
     }
 }
 
-
+// MARK: - TableView protocols
 
 extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -108,6 +108,8 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+
+// MARK: - CLLocationManagerDelegate
 
 extension ForecastViewController: CLLocationManagerDelegate {
     
