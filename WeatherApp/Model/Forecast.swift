@@ -13,7 +13,7 @@ struct Forecast {
 
     var dateString: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM, d"
+        dateFormatter.dateFormat = "dateFormat".localized()
         return dateFormatter.string(from: date)
     }
 }
