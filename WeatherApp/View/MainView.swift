@@ -14,6 +14,18 @@ class MainView: UIView {
     @IBOutlet private weak var weatherIconImageView: UIImageView!
     @IBOutlet private weak var tableView: UITableView!
     
+    var tableViewDelegate: UITableViewDelegate? {
+        didSet {
+            tableView.delegate = tableViewDelegate
+        }
+    }
+    
+    var tableViewDataSource: UITableViewDataSource? {
+        didSet {
+            tableView.dataSource = tableViewDataSource
+        }
+    }
+    
     func showForecast (date: String, temperature: Int, description: String, systemImageName: String) {
         dateLabel.text = "today".localized() + ", " + date
         temperatureLabel.text = "\(temperature)ºC"
@@ -25,13 +37,5 @@ class MainView: UIView {
     
     func showRegion(with regionName: String) {
         regionLabel.text = regionName
-    }
-    
-    func setUpTableViewDataSource (_ controller: UITableViewDataSource) {
-        tableView.dataSource = controller
-    }
-    
-    func setUpTableViewDelegate (_ controller: UITableViewDelegate) {
-        tableView.delegate = controller
     }
 }
