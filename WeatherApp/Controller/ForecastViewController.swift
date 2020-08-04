@@ -139,7 +139,9 @@ extension ForecastViewController: CLLocationManagerDelegate {
             case .success(let location):
                 self.currentLocation = location
             case .failure(let error):
-                self.showAlert(title: "location availability error".localized(), message: error.localizedDescription, actionTitle: "OK")
+                self.showAlert(title: "location availability error".localized(),
+                               message: error.localizedDescription,
+                               actionTitle: "OK")
                 self.currentLocation = Location.fakeLocation
             }
         }
@@ -147,6 +149,8 @@ extension ForecastViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        showAlert(title: "location availability error".localized(), message: "some undefined error".localized(), actionTitle: "OK")
+        showAlert(title: "location availability error".localized(),
+                  message: "some undefined error".localized(),
+                  actionTitle: "OK")
     }
 }
