@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA8C1FF524D85C0A0089121C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8C1FF324D85C0A0089121C /* InfoPlist.strings */; };
+		BA8C1FF824D85C0A0089121C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8C1FF624D85C0A0089121C /* Localizable.strings */; };
+		BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C1FFA24D85C320089121C /* StringExtension.swift */; };
+		BAB1A12624D5C69B00E3E8DD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12524D5C69B00E3E8DD /* Location.swift */; };
+		BAB1A12924D5C73F00E3E8DD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */; };
+		BAB1A12B24D5C9A800E3E8DD /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */; };
 		BAD9085924D1CD5400D447A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085824D1CD5400D447A0 /* AppDelegate.swift */; };
 		BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */; };
-		BAD9085D24D1CD5400D447A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085C24D1CD5400D447A0 /* ViewController.swift */; };
+		BAD9085D24D1CD5400D447A0 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085C24D1CD5400D447A0 /* ForecastViewController.swift */; };
 		BAD9086024D1CD5400D447A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD9085E24D1CD5400D447A0 /* Main.storyboard */; };
 		BAD9086224D1CD5900D447A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD9086124D1CD5900D447A0 /* Assets.xcassets */; };
 		BAD9086524D1CD5900D447A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD9086324D1CD5900D447A0 /* LaunchScreen.storyboard */; };
@@ -22,10 +28,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA8C1FF124D85A920089121C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		BA8C1FF224D85A920089121C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BA8C1FF424D85C0A0089121C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA8C1FF724D85C0A0089121C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA8C1FF924D85C220089121C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA8C1FFA24D85C320089121C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		BAB1A12524D5C69B00E3E8DD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		BAD9085524D1CD5400D447A0 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD9085824D1CD5400D447A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BAD9085C24D1CD5400D447A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAD9085C24D1CD5400D447A0 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		BAD9085F24D1CD5400D447A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAD9086124D1CD5900D447A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAD9086424D1CD5900D447A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAB1A12724D5C6F900E3E8DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */,
+				BA8C1FFA24D85C320089121C /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BAD9084C24D1CD5400D447A0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +96,7 @@
 				BAD9087424D1E43B00D447A0 /* View */,
 				BAD9087524D1E44000D447A0 /* Controller */,
 				BAD9087624D29EBB00D447A0 /* Services */,
+				BAB1A12724D5C6F900E3E8DD /* Extensions */,
 				BAD9086C24D1DC8200D447A0 /* Supporting files */,
 			);
 			path = WeatherApp;
@@ -82,6 +107,8 @@
 			children = (
 				BAD9086324D1CD5900D447A0 /* LaunchScreen.storyboard */,
 				BAD9086624D1CD5900D447A0 /* Info.plist */,
+				BA8C1FF624D85C0A0089121C /* Localizable.strings */,
+				BA8C1FF324D85C0A0089121C /* InfoPlist.strings */,
 				BAD9085824D1CD5400D447A0 /* AppDelegate.swift */,
 				BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */,
 				BAD9086124D1CD5900D447A0 /* Assets.xcassets */,
@@ -95,6 +122,7 @@
 				BAD9087B24D2A08500D447A0 /* APIConstants.swift */,
 				BAD9087924D29FFD00D447A0 /* Forecast.swift */,
 				BAD9087D24D2CF1D00D447A0 /* Errors.swift */,
+				BAB1A12524D5C69B00E3E8DD /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,7 +140,7 @@
 		BAD9087524D1E44000D447A0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BAD9085C24D1CD5400D447A0 /* ViewController.swift */,
+				BAD9085C24D1CD5400D447A0 /* ForecastViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD9087724D29ECC00D447A0 /* NetworkService.swift */,
+				BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -167,6 +196,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = BAD9084C24D1CD5400D447A0;
 			productRefGroup = BAD9085624D1CD5400D447A0 /* Products */;
@@ -183,7 +213,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA8C1FF824D85C0A0089121C /* Localizable.strings in Resources */,
 				BAD9086524D1CD5900D447A0 /* LaunchScreen.storyboard in Resources */,
+				BA8C1FF524D85C0A0089121C /* InfoPlist.strings in Resources */,
 				BAD9086224D1CD5900D447A0 /* Assets.xcassets in Resources */,
 				BAD9086024D1CD5400D447A0 /* Main.storyboard in Resources */,
 			);
@@ -198,12 +230,16 @@
 			files = (
 				BAD9087024D1DE0D00D447A0 /* TableViewCell.swift in Sources */,
 				BAD9086E24D1DDEC00D447A0 /* MainView.swift in Sources */,
+				BAB1A12624D5C69B00E3E8DD /* Location.swift in Sources */,
 				BAD9087A24D29FFD00D447A0 /* Forecast.swift in Sources */,
-				BAD9085D24D1CD5400D447A0 /* ViewController.swift in Sources */,
+				BAD9085D24D1CD5400D447A0 /* ForecastViewController.swift in Sources */,
 				BAD9087C24D2A08500D447A0 /* APIConstants.swift in Sources */,
 				BAD9085924D1CD5400D447A0 /* AppDelegate.swift in Sources */,
 				BAD9087824D29ECC00D447A0 /* NetworkService.swift in Sources */,
 				BAD9087E24D2CF1D00D447A0 /* Errors.swift in Sources */,
+				BAB1A12924D5C73F00E3E8DD /* UIViewControllerExtension.swift in Sources */,
+				BAB1A12B24D5C9A800E3E8DD /* LocationService.swift in Sources */,
+				BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */,
 				BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,10 +247,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		BA8C1FF324D85C0A0089121C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA8C1FF424D85C0A0089121C /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BA8C1FF624D85C0A0089121C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA8C1FF724D85C0A0089121C /* ru */,
+				BA8C1FF924D85C220089121C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BAD9085E24D1CD5400D447A0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BAD9085F24D1CD5400D447A0 /* Base */,
+				BA8C1FF124D85A920089121C /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -223,6 +277,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BAD9086424D1CD5900D447A0 /* Base */,
+				BA8C1FF224D85A920089121C /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -234,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -294,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

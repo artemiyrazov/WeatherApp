@@ -1,0 +1,6 @@
+/* Bundle name */
+"CFBundleName" = "Погода";
+
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "Пожалуйста, предоставьте свою локацию для получения актуальных прогнозов погоды в вашем регионе";
+

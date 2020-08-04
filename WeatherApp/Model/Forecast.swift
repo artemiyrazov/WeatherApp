@@ -12,7 +12,7 @@ struct Forecast {
     var dateString: String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM, d"
+        dateFormatter.dateFormat = "dateFormat".localized()
         return dateFormatter.string(from: date)
     }
     var weather: Weather {
