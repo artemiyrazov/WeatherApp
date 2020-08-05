@@ -8,6 +8,8 @@ import CoreLocation
 
 class ForecastViewController: UIViewController {
     
+    private let mapViewControllerID = "MapVC"
+    private let locationService = LocationService()
     private let networkService = NetworkService()
     private let locationService = LocationService()
     private let coreDataService = CoreDataService.shared
@@ -29,6 +31,16 @@ class ForecastViewController: UIViewController {
         mainView.tableViewDataSource = self
         locationService.locationManagerDelegate = self
         loadDailyForecastFromStorage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     private func loadDailyForecastFromStorage() {
@@ -83,6 +95,14 @@ class ForecastViewController: UIViewController {
                               description: todayForecast.description,
                               systemImageName: todayForecast.weatherType.systemImageName)
     }
+    
+    private func presentMapViewController(with forecast: Forecast, _ location: Location) {
+        let mapVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(identifier: mapViewControllerID) as! MapViewController
+        mapVC.forecast = forecast
+        mapVC.location = location
+        navigationController?.pushViewController(mapVC, animated: true)
+    }
 }
 
 // MARK: - TableView protocols
@@ -106,6 +126,11 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
                        systemImageName: forecast.weatherType.systemImageName,
                        temperature: forecast.temperature)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let location = currentLocation else { return }
+        presentMapViewController(with: forecasts[indexPath.row], location)
     }
 }
 

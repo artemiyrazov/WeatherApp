@@ -13,6 +13,8 @@
 		BA8C1FF524D85C0A0089121C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8C1FF324D85C0A0089121C /* InfoPlist.strings */; };
 		BA8C1FF824D85C0A0089121C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8C1FF624D85C0A0089121C /* Localizable.strings */; };
 		BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C1FFA24D85C320089121C /* StringExtension.swift */; };
+		BA8C201024D98E160089121C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C200F24D98E160089121C /* MapViewController.swift */; };
+		BA8C201224D98E440089121C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C201124D98E440089121C /* MapView.swift */; };
 		BAB1A12624D5C69B00E3E8DD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12524D5C69B00E3E8DD /* Location.swift */; };
 		BAB1A12924D5C73F00E3E8DD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */; };
 		BAB1A12B24D5C9A800E3E8DD /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */; };
@@ -41,6 +43,8 @@
 		BA8C1FF924D85C220089121C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA8C1FFA24D85C320089121C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		BA8C200E24D971A90089121C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA8C200F24D98E160089121C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BA8C201124D98E440089121C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BAB1A12524D5C69B00E3E8DD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			children = (
 				BAD9085E24D1CD5400D447A0 /* Main.storyboard */,
 				BAD9086D24D1DDEC00D447A0 /* MainView.swift */,
+				BA8C201124D98E440089121C /* MapView.swift */,
 				BAD9086F24D1DE0D00D447A0 /* TableViewCell.swift */,
 			);
 			path = View;
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD9085C24D1CD5400D447A0 /* ForecastViewController.swift */,
+				BA8C200F24D98E160089121C /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				BAD9085D24D1CD5400D447A0 /* ForecastViewController.swift in Sources */,
 				BAD9087C24D2A08500D447A0 /* APIConstants.swift in Sources */,
 				BAD9085924D1CD5400D447A0 /* AppDelegate.swift in Sources */,
+				BA8C201224D98E440089121C /* MapView.swift in Sources */,
 				BAD9087824D29ECC00D447A0 /* NetworkService.swift in Sources */,
 				BA5105E324D40BCF00A98B77 /* CoreDataService.swift in Sources */,
 				BAD9087E24D2CF1D00D447A0 /* Errors.swift in Sources */,
@@ -254,6 +261,7 @@
 				BAB1A12B24D5C9A800E3E8DD /* LocationService.swift in Sources */,
 				BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */,
 				BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */,
+				BA8C201024D98E160089121C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
