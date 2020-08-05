@@ -12,7 +12,7 @@ class MapViewController: UIViewController {
         didSet {
             guard let location = location else { return }
             let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-            mapView.centeringMap(around: coordinate)
+            mapView.centeringMap(around: coordinate, regionInMeters: 100 * 1000)
             }
     }
     
