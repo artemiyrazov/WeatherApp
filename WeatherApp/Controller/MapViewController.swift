@@ -11,6 +11,7 @@ class MapViewController: UIViewController {
     var location: Location? {
         didSet {
             guard let location = location else { return }
+            loadViewIfNeeded()
             let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
             mapView.centeringMap(around: coordinate, regionInMeters: 100 * 1000)
             }
