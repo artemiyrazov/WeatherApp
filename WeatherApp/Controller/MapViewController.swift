@@ -4,7 +4,7 @@
 //
 
 import UIKit
-import CoreLocation
+import MapKit
 
 class MapViewController: UIViewController {
     
@@ -14,8 +14,10 @@ class MapViewController: UIViewController {
     private var mapView: MapView!
     
     override func viewDidLoad() {
+        
         mapView = view as? MapView
+        
         let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-        mapView.addAnnotationOnMap(coordinate, title: "\(Int(forecast.temperature))ºC", subtitle: forecast.weather.description)
+        mapView.addAnnotationOnMap(coordinate, title: "\(Int(forecast.temperature))ºC", subtitle: forecast.weather.description, annotationImageName: forecast.weather.weatherType.systemImageName)
     }
 }
