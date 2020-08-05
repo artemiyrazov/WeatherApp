@@ -18,6 +18,8 @@ class MapViewController: UIViewController {
         mapView = view as? MapView
         
         let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-        mapView.addAnnotationOnMap(coordinate, title: "\(Int(forecast.temperature))ºC", subtitle: forecast.weather.description, annotationImageName: forecast.weather.weatherType.systemImageName)
+        mapView.addAnnotationOnMap(coordinate, title: "\(Int(forecast.temperature))ºC",
+            subtitle: forecast.description,
+            annotationImageName: forecast.weatherType.systemImageName)
     }
 }

@@ -9,9 +9,8 @@ import CoreLocation
 class ForecastViewController: UIViewController {
     
     private let mapViewControllerID = "MapVC"
-    private let locationService = LocationService()
+    private var locationService = LocationService()
     private let networkService = NetworkService()
-    private let locationService = LocationService()
     private let coreDataService = CoreDataService.shared
     private var futureForecasts: [Forecast] = []
     private var todayForecast: Forecast?
@@ -130,7 +129,7 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let location = currentLocation else { return }
-        presentMapViewController(with: forecasts[indexPath.row], location)
+        presentMapViewController(with: futureForecasts[indexPath.row], location)
     }
 }
 
