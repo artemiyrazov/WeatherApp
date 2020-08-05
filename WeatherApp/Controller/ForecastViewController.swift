@@ -6,6 +6,11 @@
 import UIKit
 import CoreLocation
 
+protocol MapPresenterDelegate: class {
+    func forecastSelected(_ newForecast: Forecast)
+    func locationUpdated(_ newLocation: Location)
+}
+
 class ForecastViewController: UIViewController {
     
     private let mapViewControllerID = "MapVC"
@@ -16,9 +21,11 @@ class ForecastViewController: UIViewController {
     private var currentLocation: Location! {
         didSet {
             mainView.showRegion(with: currentLocation.name)
+            mapPresenterDelegate?.locationUpdated(currentLocation)
             loadForecastFromServer()
         }
     }
+    var mapPresenterDelegate: MapPresenterDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,14 +81,6 @@ class ForecastViewController: UIViewController {
                              description: todayForecast.weather.description,
                              systemImageName: todayForecast.weather.weatherType.systemImageName)
     }
-    
-    private func presentMapViewController(with forecast: Forecast, _ location: Location) {
-        let mapVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(identifier: mapViewControllerID) as! MapViewController
-        mapVC.forecast = forecast
-        mapVC.location = location
-        navigationController?.pushViewController(mapVC, animated: true)
-    }
 }
 
 extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
@@ -107,8 +106,11 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let location = currentLocation else { return }
-        presentMapViewController(with: forecasts[indexPath.row], location)
+        guard currentLocation != nil else { return }
+        mapPresenterDelegate?.forecastSelected(forecasts[indexPath.row + 1])
+        if let detailVC = mapPresenterDelegate as? MapViewController {
+            splitViewController?.showDetailViewController(detailVC, sender: nil)
+        }
     }
 }
 
