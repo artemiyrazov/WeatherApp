@@ -7,11 +7,10 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    private let networkService = NetworkService()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
         return true
     }
 
@@ -29,5 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        let location = Location.fakeLocation
+        networkService.dailyForecastRequest(latitude: location.latitude, longitude: location.longitude) { response in
+            switch response {
+            case .success(let forecasts):
+                CoreDataService.shared.updateForecastsInStorage(withNew: forecasts)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
