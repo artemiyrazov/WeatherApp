@@ -20,6 +20,7 @@ class ForecastViewController: UIViewController {
         didSet {
             mainView.showRegion(with: currentLocation.name)
             loadDailyForecastFromServer()
+            currentLocation.saveToKeychain()
         }
     }
     

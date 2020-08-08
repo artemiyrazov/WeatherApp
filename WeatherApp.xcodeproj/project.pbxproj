@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA22F2F924DEED3D00A7CA30 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22F2F824DEED3D00A7CA30 /* KeychainService.swift */; };
 		BA5105E124D40B0600A98B77 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */; };
 		BA5105E324D40BCF00A98B77 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5105E224D40BCF00A98B77 /* CoreDataService.swift */; };
 		BA5105E524D429D500A98B77 /* InternetConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5105E424D429D500A98B77 /* InternetConnectionService.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA22F2F824DEED3D00A7CA30 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		BA5105E024D40B0600A98B77 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		BA5105E224D40BCF00A98B77 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		BA5105E424D429D500A98B77 /* InternetConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionService.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				BA5105E224D40BCF00A98B77 /* CoreDataService.swift */,
 				BA5105E424D429D500A98B77 /* InternetConnectionService.swift */,
 				BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */,
+				BA22F2F824DEED3D00A7CA30 /* KeychainService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				BA5105E324D40BCF00A98B77 /* CoreDataService.swift in Sources */,
 				BAD9087E24D2CF1D00D447A0 /* Errors.swift in Sources */,
 				BAB1A12924D5C73F00E3E8DD /* UIViewControllerExtension.swift in Sources */,
+				BA22F2F924DEED3D00A7CA30 /* KeychainService.swift in Sources */,
 				BAB1A12B24D5C9A800E3E8DD /* LocationService.swift in Sources */,
 				BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */,
 				BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */,
