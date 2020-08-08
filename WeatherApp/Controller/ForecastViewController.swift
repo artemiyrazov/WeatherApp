@@ -101,6 +101,7 @@ class ForecastViewController: UIViewController {
             .instantiateViewController(identifier: mapViewControllerID) as! MapViewController
         mapVC.forecast = forecast
         mapVC.location = location
+        mapVC.navigationItem.title = forecast.dateString
         navigationController?.pushViewController(mapVC, animated: true)
     }
 }
