@@ -32,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+        
+        // Comment next method to cancel repeatable background forecasts update
+        scheduleBackgroundForecastFetch()
     }
     
     func scheduleBackgroundForecastFetch() {

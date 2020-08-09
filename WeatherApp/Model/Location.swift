@@ -13,7 +13,7 @@ struct Location: Codable {
     let latitude: Double
     let longitude: Double
     
-    private let keychainKey = "lastUserLocation"
+    private var keychainKey = "lastUserLocation"
 
     /// Default initialization
     init(name: String, latitude: Double, longitude: Double) {
