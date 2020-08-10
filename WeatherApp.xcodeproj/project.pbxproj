@@ -33,7 +33,7 @@
 		BAD9087C24D2A08500D447A0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9087B24D2A08500D447A0 /* APIConstants.swift */; };
 		BAD9087E24D2CF1D00D447A0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9087D24D2CF1D00D447A0 /* Errors.swift */; };
 		BADB491D24E1563300E5B5A1 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADB491C24E1563300E5B5A1 /* NotificationCenter.framework */; };
-		BADB492024E1563300E5B5A1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB491F24E1563300E5B5A1 /* TodayViewController.swift */; };
+		BADB492024E1563300E5B5A1 /* WeatherTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB491F24E1563300E5B5A1 /* WeatherTodayViewController.swift */; };
 		BADB492324E1563300E5B5A1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB492124E1563300E5B5A1 /* MainInterface.storyboard */; };
 		BADB492724E1563300E5B5A1 /* Weather Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BADB491A24E1563300E5B5A1 /* Weather Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BADB492C24E15B7600E5B5A1 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5105E224D40BCF00A98B77 /* CoreDataService.swift */; };
@@ -44,6 +44,9 @@
 		BADB493224E15BA700E5B5A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8C1FF324D85C0A0089121C /* InfoPlist.strings */; };
 		BADB493624E15FB200E5B5A1 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB493524E15FB200E5B5A1 /* NSPersistentContainerExtension.swift */; };
 		BADB493724E1607200E5B5A1 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB493524E15FB200E5B5A1 /* NSPersistentContainerExtension.swift */; };
+		BADB493924E1634A00E5B5A1 /* WeatherTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB493824E1634A00E5B5A1 /* WeatherTodayView.swift */; };
+		BADB493B24E1667C00E5B5A1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12524D5C69B00E3E8DD /* Location.swift */; };
+		BADB493C24E1668500E5B5A1 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22F2F824DEED3D00A7CA30 /* KeychainService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,12 +107,13 @@
 		BAD9087D24D2CF1D00D447A0 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		BADB491A24E1563300E5B5A1 /* Weather Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Weather Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADB491C24E1563300E5B5A1 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		BADB491F24E1563300E5B5A1 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BADB491F24E1563300E5B5A1 /* WeatherTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTodayViewController.swift; sourceTree = "<group>"; };
 		BADB492224E1563300E5B5A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		BADB492424E1563300E5B5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADB493324E15D3000E5B5A1 /* Weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Weather.entitlements; sourceTree = "<group>"; };
 		BADB493424E15D9500E5B5A1 /* Weather Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Widget.entitlements"; sourceTree = "<group>"; };
 		BADB493524E15FB200E5B5A1 /* NSPersistentContainerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerExtension.swift; sourceTree = "<group>"; };
+		BADB493824E1634A00E5B5A1 /* WeatherTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTodayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				BADB493424E15D9500E5B5A1 /* Weather Widget.entitlements */,
-				BADB491F24E1563300E5B5A1 /* TodayViewController.swift */,
+				BADB491F24E1563300E5B5A1 /* WeatherTodayViewController.swift */,
+				BADB493824E1634A00E5B5A1 /* WeatherTodayView.swift */,
 				BADB492124E1563300E5B5A1 /* MainInterface.storyboard */,
 				BADB492424E1563300E5B5A1 /* Info.plist */,
 			);
@@ -389,8 +394,11 @@
 			files = (
 				BADB492E24E15B8A00E5B5A1 /* StringExtension.swift in Sources */,
 				BADB492F24E15B9900E5B5A1 /* DataModel.xcdatamodeld in Sources */,
+				BADB493B24E1667C00E5B5A1 /* Location.swift in Sources */,
 				BADB492C24E15B7600E5B5A1 /* CoreDataService.swift in Sources */,
-				BADB492024E1563300E5B5A1 /* TodayViewController.swift in Sources */,
+				BADB492024E1563300E5B5A1 /* WeatherTodayViewController.swift in Sources */,
+				BADB493C24E1668500E5B5A1 /* KeychainService.swift in Sources */,
+				BADB493924E1634A00E5B5A1 /* WeatherTodayView.swift in Sources */,
 				BADB493024E15BA200E5B5A1 /* Forecast.swift in Sources */,
 				BADB493724E1607200E5B5A1 /* NSPersistentContainerExtension.swift in Sources */,
 			);

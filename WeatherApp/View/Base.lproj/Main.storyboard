@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hhw-3W-J91">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hhw-3W-J91">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +22,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de1-PD-iPI">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
-                                        <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                        <color key="textColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e5D-qu-lX3">
@@ -64,7 +62,7 @@
                                             </stackView>
                                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vqV-Jo-co4">
                                                 <rect key="frame" x="229.33333333333334" y="0.0" width="95.666666666666657" height="95.666666666666671"/>
-                                                <color key="tintColor" systemColor="systemTealColor"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="vqV-Jo-co4" secondAttribute="height" multiplier="1:1" id="oUy-AJ-5bg"/>
                                                 </constraints>
@@ -92,21 +90,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynZ-O9-mlH">
-                                                    <rect key="frame" x="26" y="25" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="25" y="25" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="omS-oT-BUP">
-                                                    <rect key="frame" x="244" y="5" width="40" height="40"/>
-                                                    <color key="tintColor" systemColor="systemTealColor"/>
+                                                    <rect key="frame" x="245" y="5" width="40" height="40"/>
+                                                    <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="eyB-YW-TXl"/>
                                                         <constraint firstAttribute="height" constant="40" id="rbm-Jz-eGg"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-Le-4ET">
-                                                    <rect key="frame" x="299" y="25" width="50" height="0.0"/>
+                                                    <rect key="frame" x="300" y="25" width="50" height="0.0"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="clm-zj-H2g"/>
                                                     </constraints>
@@ -135,7 +133,6 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="CustomBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="uS6-RW-9EF" secondAttribute="bottom" id="3bs-Xb-zov"/>
@@ -146,6 +143,7 @@
                             <constraint firstItem="n5A-FG-Lif" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="hy8-iZ-SB0"/>
                             <constraint firstItem="n5A-FG-Lif" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="uaR-Mm-TTc"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outlet property="dateLabel" destination="de1-PD-iPI" id="p2H-Qq-dvR"/>
                             <outlet property="regionLabel" destination="kTc-Yc-EVH" id="iII-g6-Pq4"/>
@@ -173,14 +171,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </mapView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="f8a-el-hDL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Sbw-IE-KXL" secondAttribute="trailing" id="a8c-gt-ru2"/>
                             <constraint firstItem="Sbw-IE-KXL" firstAttribute="top" secondItem="ODG-4e-WdN" secondAttribute="top" id="eCt-f8-T5N"/>
                             <constraint firstItem="Sbw-IE-KXL" firstAttribute="leading" secondItem="ODG-4e-WdN" secondAttribute="leading" id="nhm-Vp-IXf"/>
                             <constraint firstAttribute="bottom" secondItem="Sbw-IE-KXL" secondAttribute="bottom" id="opJ-M2-lCp"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="f8a-el-hDL"/>
                         <connections>
                             <outlet property="mkMapView" destination="Sbw-IE-KXL" id="tPI-xV-bgJ"/>
                         </connections>
@@ -225,14 +223,5 @@
         <namedColor name="CustomBackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
