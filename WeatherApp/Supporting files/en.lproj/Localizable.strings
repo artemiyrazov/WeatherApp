@@ -1,24 +1,19 @@
-/* No comment provided by engineer. */
+
 "dateFormat" = "MMMM, d";
+"language" = "en";
 
-/* No comment provided by engineer. */
+"Cupertino" = "Cupertino";
 "today" = "today";
+"error" = "Error";
 
-/* No comment provided by engineer. */
-"error" = "Ошибка";
+"Internet connection error" = "Internet connection error";
+"JSON parsing error" = "JSON parsing error";
+"location availability error" = "Location availability error";
+"Network request error" = "Network request error";
+"some undefined error" = "Some undefined error";
+"Invalid server response" = "Invalid server response";
 
-/* No comment provided by engineer. */
-"location availability error" = "Ошибка доступа к геолокации";
-
-/* No comment provided by engineer. */
-"location services disabled" = "Службы геолокации отключены. Активируйте их в Настройки - Конфеденциальность - Службы геолокации";
-
-/* No comment provided by engineer. */
-"location unavailable" = "Локация пользователя недоступна. Предоставьте доступ в Настройки - Погода - Геопозиция";
-
-/* No comment provided by engineer. */
-"location undefined" = "Геолокация не определена. Попробуйте позже";
-
-/* No comment provided by engineer. */
-"some undefined error" = "Неопределенная ошибка";
-
+"Check your internet connection and try again" = "Check your internet connection and try again";
+"location unavailable" = "Location unavailable. Provide access in Settings - Weather - Location";
+"location undefined" = "Location undefined. Try again later";
+"location services disabled" = "Location services disabled. Turn on Settings - Privacy - Location services";

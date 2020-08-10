@@ -6,8 +6,17 @@
 import Foundation
 
 enum ForecastRequestError: String, Error {
-    case invalidJSON = "JSON parsing error"
-    case invalidResponse = "Network request error"
+    case invalidJSON
+    case invalidResponse
+    
+    var localizedDescription: String {
+        switch self {
+        case .invalidJSON:
+            return "JSON parsing error".localized()
+        case .invalidResponse:
+            return "Network request error".localized()
+        }
+    }
 }
 
 enum LocationRequestError: Error {

@@ -7,19 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA22F2F924DEED3D00A7CA30 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22F2F824DEED3D00A7CA30 /* KeychainService.swift */; };
+<<<<<<< HEAD
 		BA5105E124D40B0600A98B77 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */; };
 		BA5105E324D40BCF00A98B77 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5105E224D40BCF00A98B77 /* CoreDataService.swift */; };
 		BA5105E524D429D500A98B77 /* InternetConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5105E424D429D500A98B77 /* InternetConnectionService.swift */; };
+=======
 		BA8C1FF524D85C0A0089121C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8C1FF324D85C0A0089121C /* InfoPlist.strings */; };
 		BA8C1FF824D85C0A0089121C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8C1FF624D85C0A0089121C /* Localizable.strings */; };
 		BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C1FFA24D85C320089121C /* StringExtension.swift */; };
-		BA8C201024D98E160089121C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C200F24D98E160089121C /* MapViewController.swift */; };
-		BA8C201224D98E440089121C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C201124D98E440089121C /* MapView.swift */; };
-		BA8C201624DAE9000089121C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C201524DAE9000089121C /* SplitViewController.swift */; };
 		BAB1A12624D5C69B00E3E8DD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12524D5C69B00E3E8DD /* Location.swift */; };
 		BAB1A12924D5C73F00E3E8DD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */; };
 		BAB1A12B24D5C9A800E3E8DD /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */; };
+>>>>>>> develop
 		BAD9085924D1CD5400D447A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085824D1CD5400D447A0 /* AppDelegate.swift */; };
 		BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */; };
 		BAD9085D24D1CD5400D447A0 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD9085C24D1CD5400D447A0 /* ForecastViewController.swift */; };
@@ -35,23 +34,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA22F2F824DEED3D00A7CA30 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		BA5105E024D40B0600A98B77 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		BA5105E224D40BCF00A98B77 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		BA5105E424D429D500A98B77 /* InternetConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionService.swift; sourceTree = "<group>"; };
+=======
 		BA8C1FF124D85A920089121C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		BA8C1FF224D85A920089121C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BA8C1FF424D85C0A0089121C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA8C1FF724D85C0A0089121C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA8C1FF924D85C220089121C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA8C1FFA24D85C320089121C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		BA8C200E24D971A90089121C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BA8C200F24D98E160089121C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		BA8C201124D98E440089121C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		BA8C201524DAE9000089121C /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		BAB1A12524D5C69B00E3E8DD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+>>>>>>> develop
 		BAD9085524D1CD5400D447A0 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD9085824D1CD5400D447A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD9085A24D1CD5400D447A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				BA5105DF24D40B0600A98B77 /* DataModel.xcdatamodeld */,
-				BAD9086624D1CD5900D447A0 /* Info.plist */,
 				BAD9086324D1CD5900D447A0 /* LaunchScreen.storyboard */,
+				BAD9086624D1CD5900D447A0 /* Info.plist */,
 				BA8C1FF624D85C0A0089121C /* Localizable.strings */,
 				BA8C1FF324D85C0A0089121C /* InfoPlist.strings */,
 				BAD9085824D1CD5400D447A0 /* AppDelegate.swift */,
@@ -148,7 +145,6 @@
 			children = (
 				BAD9085E24D1CD5400D447A0 /* Main.storyboard */,
 				BAD9086D24D1DDEC00D447A0 /* MainView.swift */,
-				BA8C201124D98E440089121C /* MapView.swift */,
 				BAD9086F24D1DE0D00D447A0 /* TableViewCell.swift */,
 			);
 			path = View;
@@ -158,8 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				BAD9085C24D1CD5400D447A0 /* ForecastViewController.swift */,
-				BA8C200F24D98E160089121C /* MapViewController.swift */,
-				BA8C201524DAE9000089121C /* SplitViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,10 +162,12 @@
 			isa = PBXGroup;
 			children = (
 				BAD9087724D29ECC00D447A0 /* NetworkService.swift */,
+<<<<<<< HEAD
 				BA5105E224D40BCF00A98B77 /* CoreDataService.swift */,
 				BA5105E424D429D500A98B77 /* InternetConnectionService.swift */,
+=======
 				BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */,
-				BA22F2F824DEED3D00A7CA30 /* KeychainService.swift */,
+>>>>>>> develop
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -259,17 +255,13 @@
 				BAD9085D24D1CD5400D447A0 /* ForecastViewController.swift in Sources */,
 				BAD9087C24D2A08500D447A0 /* APIConstants.swift in Sources */,
 				BAD9085924D1CD5400D447A0 /* AppDelegate.swift in Sources */,
-				BA8C201224D98E440089121C /* MapView.swift in Sources */,
 				BAD9087824D29ECC00D447A0 /* NetworkService.swift in Sources */,
 				BA5105E324D40BCF00A98B77 /* CoreDataService.swift in Sources */,
 				BAD9087E24D2CF1D00D447A0 /* Errors.swift in Sources */,
 				BAB1A12924D5C73F00E3E8DD /* UIViewControllerExtension.swift in Sources */,
-				BA22F2F924DEED3D00A7CA30 /* KeychainService.swift in Sources */,
 				BAB1A12B24D5C9A800E3E8DD /* LocationService.swift in Sources */,
 				BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */,
 				BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */,
-				BA8C201024D98E160089121C /* MapViewController.swift in Sources */,
-				BA8C201624DAE9000089121C /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +272,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				BA8C1FF424D85C0A0089121C /* ru */,
-				BA8C200E24D971A90089121C /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="WeatherApp/Supporting files/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.6" build-num="11E708"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Weather</source>
+        <target>Weather</target>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
+        <source>Please, provide your location for actually forecasts in your region</source>
+        <target>Please, provide your location for actually forecasts in your region</target>
+        <note>Privacy - Location When In Use Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="WeatherApp/Supporting files/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.6" build-num="11E708"/>
+    </header>
+    <body>
+      <trans-unit id="Check your internet connection and try again" xml:space="preserve">
+        <source>Check your internet connection and try again</source>
+        <target>Check your internet connection and try again</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Cupertino" xml:space="preserve">
+        <source>Cupertino</source>
+        <target>Cupertino</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Internet connection error" xml:space="preserve">
+        <source>Internet connection error</source>
+        <target>Internet connection error</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid server response" xml:space="preserve">
+        <source>Invalid server response</source>
+        <target>Invalid server response</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="JSON parsing error" xml:space="preserve">
+        <source>JSON parsing error</source>
+        <target>JSON parsing error</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Network request error" xml:space="preserve">
+        <source>Network request error</source>
+        <target>Network request error</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="dateFormat" xml:space="preserve">
+        <source>MMMM, d</source>
+        <target>MMMM, d</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="error" xml:space="preserve">
+        <source>Ошибка</source>
+        <target>Ошибка</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="language" xml:space="preserve">
+        <source>language</source>
+        <target>language</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="location availability error" xml:space="preserve">
+        <source>Ошибка доступа к геолокации</source>
+        <target>Ошибка доступа к геолокации</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="location services disabled" xml:space="preserve">
+        <source>Службы геолокации отключены. Активируйте их в Настройки - Конфеденциальность - Службы геолокации</source>
+        <target>Службы геолокации отключены. Активируйте их в Настройки - Конфеденциальность - Службы геолокации</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="location unavailable" xml:space="preserve">
+        <source>Локация пользователя недоступна. Предоставьте доступ в Настройки - Погода - Геопозиция</source>
+        <target>Локация пользователя недоступна. Предоставьте доступ в Настройки - Погода - Геопозиция</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="location undefined" xml:space="preserve">
+        <source>Геолокация не определена. Попробуйте позже</source>
+        <target>Геолокация не определена. Попробуйте позже</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="some undefined error" xml:space="preserve">
+        <source>Неопределенная ошибка</source>
+        <target>Неопределенная ошибка</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="today" xml:space="preserve">
+        <source>today</source>
+        <target>today</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

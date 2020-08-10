@@ -12,6 +12,7 @@ class LocationService {
     var locationManagerDelegate: CLLocationManagerDelegate? {
         didSet {
             locationManager.delegate = locationManagerDelegate
+            try? locationAvailability()
         }
     }
     
