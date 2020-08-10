@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let splitViewController = window?.rootViewController as? SplitViewController,
             let navigationController = splitViewController.viewControllers.first as? UINavigationController,
             let masterViewController = navigationController.viewControllers.first as? ForecastViewController,
-            let detailViewController = splitViewController.viewControllers.last as? MapViewController
+            let detailNavigationViewController = splitViewController.viewControllers.last as? UINavigationController,
+            let detailViewController = detailNavigationViewController.viewControllers.first as? MapViewController
             else { fatalError() }
         
         masterViewController.mapPresenterDelegate = detailViewController

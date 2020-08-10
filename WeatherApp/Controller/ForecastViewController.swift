@@ -79,7 +79,7 @@ class ForecastViewController: UIViewController {
                                             longitude: currentLocation.longitude) { [weak self] response in
             guard let self = self else { return }
             switch response {
-                
+            
             case .success(let forecasts):
                 DispatchQueue.main.async {
                     self.updateForecasts(forecasts)
@@ -137,12 +137,12 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let location = currentLocation else { return }
         guard currentLocation != nil else { return }
-        mapPresenterDelegate?.forecastSelected(futureForecasts[indexPath])
+        mapPresenterDelegate?.forecastSelected(futureForecasts[indexPath.row])
         if let detailVC = mapPresenterDelegate as? MapViewController {
             splitViewController?.showDetailViewController(detailVC, sender: nil)
         }
+    }
 }
 
 // MARK: - CLLocationManagerDelegate
