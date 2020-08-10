@@ -15,8 +15,8 @@ class CoreDataService {
         return persistentContainer.viewContext
     }
     
-    private lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "DataModel")
+    private lazy var persistentContainer: GroupedPersistentContainer = {
+        let container = GroupedPersistentContainer(name: "DataModel")
         container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
