@@ -6,6 +6,11 @@
 import UIKit
 import CoreLocation
 
+protocol MapPresenterDelegate: class {
+    func forecastSelected(_ newForecast: Forecast)
+    func locationUpdated(_ newLocation: Location)
+}
+
 class ForecastViewController: UIViewController {
     
     private let mapViewControllerID = "MapVC"
@@ -19,10 +24,12 @@ class ForecastViewController: UIViewController {
     private var currentLocation: Location! {
         didSet {
             mainView.showRegion(with: currentLocation.name)
-            loadDailyForecastFromServer()
             currentLocation.saveToKeychain()
+            mapPresenterDelegate?.locationUpdated(currentLocation)
+            loadDailyForecastFromServer()
         }
     }
+    var mapPresenterDelegate: MapPresenterDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,8 +138,11 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let location = currentLocation else { return }
-        presentMapViewController(with: futureForecasts[indexPath.row], location)
-    }
+        guard currentLocation != nil else { return }
+        mapPresenterDelegate?.forecastSelected(futureForecasts[indexPath])
+        if let detailVC = mapPresenterDelegate as? MapViewController {
+            splitViewController?.showDetailViewController(detailVC, sender: nil)
+        }
 }
 
 // MARK: - CLLocationManagerDelegate
