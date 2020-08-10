@@ -12,6 +12,7 @@
 		BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C1FFA24D85C320089121C /* StringExtension.swift */; };
 		BA8C201024D98E160089121C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C200F24D98E160089121C /* MapViewController.swift */; };
 		BA8C201224D98E440089121C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C201124D98E440089121C /* MapView.swift */; };
+		BA8C201624DAE9000089121C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C201524DAE9000089121C /* SplitViewController.swift */; };
 		BAB1A12624D5C69B00E3E8DD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12524D5C69B00E3E8DD /* Location.swift */; };
 		BAB1A12924D5C73F00E3E8DD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */; };
 		BAB1A12B24D5C9A800E3E8DD /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */; };
@@ -38,6 +39,7 @@
 		BA8C1FFA24D85C320089121C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		BA8C200F24D98E160089121C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BA8C201124D98E440089121C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BA8C201524DAE9000089121C /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		BAB1A12524D5C69B00E3E8DD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BAB1A12824D5C73F00E3E8DD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BAB1A12A24D5C9A800E3E8DD /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				BAD9085C24D1CD5400D447A0 /* ForecastViewController.swift */,
 				BA8C200F24D98E160089121C /* MapViewController.swift */,
+				BA8C201524DAE9000089121C /* SplitViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				BA8C1FFB24D85C320089121C /* StringExtension.swift in Sources */,
 				BAD9085B24D1CD5400D447A0 /* SceneDelegate.swift in Sources */,
 				BA8C201024D98E160089121C /* MapViewController.swift in Sources */,
+				BA8C201624DAE9000089121C /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
