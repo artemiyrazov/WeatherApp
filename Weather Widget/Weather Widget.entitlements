@@ -8,7 +8,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>G4WL96HW5Q.com.artemiy.WeatherApp</string>
+		<string>$(AppIdentifierPrefix)com.artemiy.WeatherApp</string>
 	</array>
 </dict>
 </plist>

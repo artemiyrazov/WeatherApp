@@ -7,7 +7,7 @@ import UIKit
 import NotificationCenter
 
 class WeatherTodayViewController: UIViewController, NCWidgetProviding {
-        
+    
     private let coreDataSerivce = CoreDataService.shared
     private var weatherTodayView: WeatherTodayView!
     
@@ -15,28 +15,45 @@ class WeatherTodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLoad()
         weatherTodayView = view as? WeatherTodayView
         
-        guard let cachedForecast = coreDataSerivce.fetchForecasts().first,
-            let location = Location() else { return }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(openMainApplication))
+        weatherTodayView.addGestureRecognizer(tap)
+        
+        if let (forecast, location) = getNewWeatherForecast() {
+            updateView(with: forecast, location: location)
+        }
+    }
+    
+    @objc private func openMainApplication() {
+        extensionContext?.open(URL(string: "Mainscreen://")!, completionHandler: nil)
+    }
+    
+    private func getNewWeatherForecast() -> (Forecast, Location)? {
+        guard let cachedForecast = CoreDataService.shared.fetchForecasts().first,
+            let location = Location() else { return nil }
         
         let forecast = Forecast(temperature: Int(cachedForecast.temperature),
                                 date: cachedForecast.date!,
                                 description: cachedForecast.weatherDescription!,
                                 weatherType: WeatherType(rawValue: cachedForecast.weatherType!)!)
         
+        return (forecast, location)
+    }
+    
+    private func updateView(with forecast: Forecast, location: Location) {
         weatherTodayView.showForecast(regionName: location.name,
                                       description: forecast.description,
                                       temperature: forecast.temperature,
                                       systemImageName: forecast.weatherType.systemImageName)
     }
-        
+    
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
         
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-        
-        completionHandler(.newData)
+        if let (forecast, location) = getNewWeatherForecast() {
+            updateView(with: forecast, location: location)
+            completionHandler(.newData)
+        } else {
+            completionHandler(.failed)
+        }
     }
     
 }
