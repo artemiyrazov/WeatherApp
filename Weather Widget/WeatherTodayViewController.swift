@@ -24,7 +24,7 @@ class WeatherTodayViewController: UIViewController, NCWidgetProviding {
     }
     
     @objc private func openMainApplication() {
-        extensionContext?.open(URL(string: "Mainscreen://")!, completionHandler: nil)
+        extensionContext?.open(URL(string: "WeatherApp://")!, completionHandler: nil)
     }
     
     private func getNewWeatherForecast() -> (Forecast, Location)? {
