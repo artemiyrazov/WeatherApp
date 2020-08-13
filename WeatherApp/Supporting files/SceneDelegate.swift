@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        // Bug fix for iOS 14 beta (Storybards don't support classic UISplitViewController style for now)
+        // Bug fix for iOS 14 beta & Xcode 12 beta (Storybards don't support classic UISplitViewController style for now)
         if #available(iOS 14.0, *) {
             if let oldSVC = self.window?.rootViewController as? UISplitViewController {
                 let newSVC = SplitViewController() // style will be undefined (classic)
@@ -29,8 +29,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let splitViewController = window?.rootViewController as? SplitViewController,
             let navigationController = splitViewController.viewControllers.first as? UINavigationController,
             let masterViewController = navigationController.viewControllers.first as? ForecastViewController,
-            let detailNavigationViewController = splitViewController.viewControllers.last as? UINavigationController,
-            let detailViewController = detailNavigationViewController.viewControllers.first as? MapViewController
+//          Resolve bugs with undefined behavior in Xcode 12 beta
+//            let detailNavigationViewController = splitViewController.viewControllers.last as? UINavigationController,
+//            let detailViewController = detailNavigationViewController.viewControllers.first as? MapViewController
+            let detailViewController = splitViewController.viewControllers.last as? MapViewController
         else { fatalError() }
         
         masterViewController.mapPresenterDelegate = detailViewController
